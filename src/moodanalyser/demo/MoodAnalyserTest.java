@@ -18,7 +18,7 @@ public class MoodAnalyserTest {
 	
 	@Test
 	public void test_null_message_to_return_happy() {
-		analyser = new MoodAnalyser();
+		analyser = new MoodAnalyser("");
 		String result = analyser.analyseMood();
 		assertEquals(MoodAnalyser.second_mood, result);
 	}
