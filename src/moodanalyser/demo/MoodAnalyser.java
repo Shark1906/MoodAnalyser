@@ -23,7 +23,7 @@ public class MoodAnalyser {
 			return second_mood;
 		}
 		}catch(MoodAnalysisException ex) {
-			 return "Exception : "+ex;
+			 return "Exception : " + ex;
 		}
 	}
 
