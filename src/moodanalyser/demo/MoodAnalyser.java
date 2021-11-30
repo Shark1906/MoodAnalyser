@@ -15,13 +15,15 @@ public class MoodAnalyser {
 
 	public String analyseMood() {
 		try {
-		if(message.toLowerCase().contains("sad")) {
+		if(message == "" | message == null) {
+		throw new MoodAnalysisException();	
+		}else if(message.toLowerCase().contains("sad")) {
 			return first_mood;
 		}else {
 			return second_mood;
 		}
-		}catch(Exception ex) {
-			return second_mood;
+		}catch(MoodAnalysisException ex) {
+			 return "Exception : "+ex;
 		}
 	}
 
